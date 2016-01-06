@@ -38,6 +38,25 @@ DATABASES = {
         'NAME': 'xqueue.sqlite',
     }
 }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'xqueue.sqlite',
+    }
+}
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'xqueue',
+        'USER': 'pepper',
+        'PASSWORD': 'lebbeb',
+        'HOST': 'mysql_read',
+        'PORT': '3306',
+    }
+}
+
 RABBIT_HOST = 'localhost'
 
 AWS_ACCESS_KEY_ID = "access_key_id"
