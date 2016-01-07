@@ -34,26 +34,12 @@ PULLED_SUBMISSION_TIMEOUT = 10    # seconds
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'xqueue.sqlite',
-    }
-}
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'xqueue.sqlite',
-    }
-}
-
-DATABASES = {
-    'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'xqueue',
-        'USER': 'pepper',
-        'PASSWORD': 'lebbeb',
-        'HOST': 'mysql_read',
-        'PORT': '3306',
+        'NAME': os.environ["XQUEUE_DB_NAME"],
+        'USER': os.environ["XQUEUE_DB_USER"],
+        'PASSWORD': os.environ["XQUEUE_DB_PASSWORD"],
+        'HOST': os.environ["XQUEUE_DB_HOST"],
+        'PORT': os.environ["XQUEUE_DB_PORT"],
     }
 }
 
